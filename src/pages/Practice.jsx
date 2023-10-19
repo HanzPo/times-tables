@@ -17,12 +17,22 @@ function Practice() {
     setCorrectAnswer(firstNumber * secondNumber);
   }, []);
 
+  const submitAnswer = () => {
+
+  }
+
+  const handleKeyPress = (event) => {
+    if(event.key === 'Enter'){
+      submitAnswer();
+    }
+  }
+
   return (
     <>
       <h1>
         What is {firstNumber} &#215; {secondNumber}?
       </h1>
-      <input />
+      <input autoFocus onKeyDown={handleKeyPress} />
     </>
   );
 }
